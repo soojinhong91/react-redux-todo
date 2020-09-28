@@ -5,9 +5,8 @@ gives us current state
 
 `<ul></ul>`
 renders todos from Home. Home needs to get the state from the store.
-(https://react-redux.js.org/using-react-redux/connect-mapstate)
 
-- react-redux: Connect
+- [react-redux](https://react-redux.js.org/using-react-redux/connect-mapstate): Connect
 
   - Connect takes two arguments: 1. state, 2. dispatch
 
@@ -21,6 +20,18 @@ renders todos from Home. Home needs to get the state from the store.
     - `mapDispatchToProps`
       - (cf) `export default connect(null, napDispatchToProps`when we need only dispatch (without getState)
 
-# Thanks to
+# [Redux Toolkit](https://redux-toolkit.js.org/introduction/quick-start)
 
-노마드코더 (http://nomadcoders.co/) 초보자를 위한 리덕스 101
+A package to make code DRY (like a package)
+
+- ` npm install @reduxjs/toolkit`
+
+1. `createAction` any information you want to send to action will be sent with payload
+2. `createReducer` instead of switch. Also, we can mutate state! (feat.immer.js) - Careful not to mutate + return. It should be either return new state or mutate state.
+3. `configureStore` instead of `const store = createStore(reducer);`
+4. `createSlice` This creates reducer as well as action.
+
+# Reference
+
+- 노마드코더 (http://nomadcoders.co/) 초보자를 위한 리덕스 101
+- [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd/related)

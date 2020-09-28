@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { useParams } from "react-router-dom";
 
 function Detail({ toDo }) {
   return (
@@ -20,7 +19,6 @@ function mapStateToProps(state, ownProps) {
       params: { id },
     },
   } = ownProps;
-  console.log(id);
   return { toDo: state.find((toDo) => toDo.id === parseInt(id)) };
 }
 
